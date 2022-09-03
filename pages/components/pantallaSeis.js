@@ -1,5 +1,53 @@
 import Image from 'next/image'
 import imagenLogo from "../../public/logo_azul.png"
+import DataTable from 'react-data-table-component'
+import uno from '/public/logos-autos/audi.png'
+
+const otsCurso =[
+    {ot:'1130', cliente: 'GOBIERNO AUTÓNOMO MUNICIPAL DE COCHABAMBA', marca: <img src={uno} />, modelo: 'E330A SE', color:'gris', placa: '2020IXP', creacion:'20-06-25 08:00'},
+    {ot:'1130', cliente: 'GOBIERNO AUTÓNOMO MUNICIPAL DE COCHABAMBA', marca: <img src='/public/logos-autos/audi.png' />, modelo: 'E330A SE', color:'gris', placa: '2020IXP', creacion:'20-06-25 08:00'},
+    {ot:'1130', cliente: 'GOBIERNO AUTÓNOMO MUNICIPAL DE COCHABAMBA', marca: <img src='/public/logos-autos/audi.png' />, modelo: 'E330A SE', color:'gris', placa: '2020IXP', creacion:'20-06-25 08:00'},
+    {ot:'1130', cliente: 'GOBIERNO AUTÓNOMO MUNICIPAL DE COCHABAMBA', marca: <img src='/public/logos-autos/audi.png' />, modelo: 'E330A SE', color:'gris', placa: '2020IXP', creacion:'20-06-25 08:00'},
+    {ot:'1130', cliente: 'GOBIERNO AUTÓNOMO MUNICIPAL DE COCHABAMBA', marca: <img src='/public/logos-autos/audi.png' />, modelo: 'E330A SE', color:'gris', placa: '2020IXP', creacion:'20-06-25 08:00'},
+];
+
+const columnas =[
+    {
+        name: '#OT',
+        selector: 'ot',
+        sortable: true
+    },
+    {
+        name: 'Cliente',
+        selector: 'cliente',
+        sortable: true
+    },
+    {
+        name: 'Marca',
+        selector: 'marca',
+        sortable: true
+    },
+    {
+        name: 'Modelo',
+        selector: 'modelo',
+        sortable: true
+    },
+    {
+        name: 'Color',
+        selector: 'Color',
+        sortable: true
+    },
+    {
+        name: 'Placa',
+        selector: 'placa',
+        sortable: true
+    },
+    {
+        name: 'Creación',
+        selector: 'creacion',
+        sortable: true
+    },
+]
 
 export default function pantallaSeis() {
     return (
@@ -181,7 +229,7 @@ export default function pantallaSeis() {
                 <div
                     className='flex flex-col'
                 >
-                    <div
+                    {/* <div
                         className='flex pl-10'
                     >
                         <p
@@ -189,8 +237,12 @@ export default function pantallaSeis() {
                         >
                             OT's en curso
                         </p>
-                    </div>
-
+                    </div> */}
+                    <DataTable 
+                        columns={columnas}
+                        data={otsCurso}
+                        title= "OT's en curso"
+                    />
                 </div>
             </div>
         </div>
