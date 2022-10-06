@@ -23,7 +23,6 @@
     // AL DECLARAR NULL A UNA VARIABLE ESTA SE CONVIERTE A UNA VARIABLE VACIA "SU VALOR ES VACIO"
 
 
-
 // + * - / Y NAN
     let numeroUno = 5;
     let numeroDos = 5;
