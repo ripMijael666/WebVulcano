@@ -19,3 +19,7 @@ let asignacionCinco = 640;
     asignacionCinco %= 6;
 document.write(asignacion);
 
+// CONCATENACION DE PALABRAS
+let nombre = prompt("cual es tu nombre");
+let frase = `${nombre} es re blanco mal`;
+alert(frase);
