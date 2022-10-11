@@ -20,6 +20,16 @@ let asignacionCinco = 640;
 document.write(asignacion);
 
 // CONCATENACION DE PALABRAS
-let nombre = prompt("cual es tu nombre");
-let frase = `${nombre} es re blanco mal`;
-alert(frase);
+// let nombre = prompt("cual es tu nombre");
+// let frase = `${nombre} es re blanco mal`;
+// alert(frase);
+
+let pregunta  = prompt("Ingrese su nombre ")
+
+if (pregunta === "Mijael") {
+    alert(pregunta + " eres blanco y tienes mas derechos que los negros 3:) ")
+}
+else if (pregunta != "Mijael") {
+    alert(pregunta + " eres un negro de MIERDA no tienes derechos :(")
+}
+
